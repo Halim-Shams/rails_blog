@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SimpleBlog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body class='bg-yellow-200/10'>
+    <nav class="flex items-center justify-between px-48 py-8 text-[#1e2740] bg-white">
+      <div class="inline-block text-2xl font-extrabold text-transparent text-orage font-montserrat bg-gradient-to-tr from-orange-500/90 to-yellow-400/80 bg-clip-text">Orangello</div>
+      <div class="flex gap-5 font-medium font-montserrat">
+        <p class="">Home</p>
+        <p class="">About</p>
+        <p class="">Contact</p>
+      </div>
+    </nav>
+    <main class="w-[72rem] mx-auto">
+      <%= yield %>
+    </main>
+  </body>
+</html>
