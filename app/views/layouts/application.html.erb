@@ -11,15 +11,18 @@
   </head>
 
   <body class='bg-yellow-200/10'>
-    <nav class="flex items-center justify-between px-48 py-8 text-[#1e2740] bg-white">
-      <div class="inline-block text-2xl font-extrabold text-transparent text-orage font-montserrat bg-gradient-to-tr from-orange-500/90 to-yellow-400/80 bg-clip-text">Orangello</div>
-      <div class="flex gap-5 font-medium font-montserrat">
-        <p class="">Home</p>
-        <p class="">About</p>
-        <p class="">Contact</p>
+    <nav class="mx-auto lg:max-w-[76rem] md:max-w-[66rem] sm:max-w-[52rem] py-8 px-6 text-[#1e2740]">
+      <div class="flex items-center justify-between">
+        <div class="inline-block text-2xl font-extrabold text-transparent text-orage font-montserrat bg-gradient-to-tr from-orange-500/90 to-yellow-400/80 bg-clip-text">Orangello</div>
+        <div class="flex gap-5 font-medium font-montserrat items-center">
+          <p class="">Home</p>
+          <p class="">About</p>
+          <p class="">Contact</p>
+          <%= link_to 'Write a Post', new_post_path, class:'px-4 py-2 text-sm font-medium text-white rounded-md bg-orange-400/90 hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-300' %>
+        </div>
       </div>
     </nav>
-    <main class="w-[72rem] mx-auto">
+    <main class="lg:max-w-[76rem] md:max-w-[66rem] sm:max-w-[50rem] px-6 mx-auto">
       <%= yield %>
     </main>
   </body>
